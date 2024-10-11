@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        body {
+            background: #ccc;
+        }
+
+        #pop {
+            min-width: 200px;
+            /* aspect-ratio: 1; */
+            height: 200px;
+            text-shadow: 10px 10px 50px white;
+            background-image: url("/A_practice/rose.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation-name: run;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            border-radius: 50%;
+            /* box-shadow: 0px 0px 90px 50px rgba(182, 135, 135, 0.6); */
+            /* animation-direction: fo; */
+            /* padding: 5%;
+            margin: -1%; */
+        }
+
+        @keyframes run {
+            0% {
+                rotate: 45deg;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+            }
+
+            25% {
+                rotate: 0deg;
+                position: absolute;
+                top: 0%;
+                left: 80%;
+            }
+
+            50% {
+                position: absolute;
+                top: 60%;
+                left: 80%;
+            }
+
+            75% {
+                position: absolute;
+                /* rotate: 45deg; */
+                rotate: -45deg;
+                top: 60%;
+                left: 0%;
+            }
+
+            100% {
+                rotate: 0deg;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+
+            }
+        }
+
+        main {
+            height: 100vh;
+            width: 100vw;
+            /* background: #000; */
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #demo {
+            margin: auto;
+            height: 200px;
+            width: 200px;
+            /* border: 1px solid black; */
+            /* transition: all; */
+            /* transform: translateX(100px); */
+            background: #c71e1e;
+            border-radius: 10px;
+            box-shadow: 0px 0px 90px 50px rgba(182, 135, 135, 0.6);
+            border: 1px solid rgb(195, 161, 161);
+        }
+
+        #sub {
+            height: 50%;
+            width: 100%;
+            text-align: center;
+            font-variant: small-caps;
+            padding-top: 30%;
+            font-weight: bolder;
+            color: white;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid rgb(118, 112, 112);
+            border-radius: 10px 10px 50% 50%;
+            /* box-shadow: 0px 10px 10px rgba(246, 243, 243, .6); */
+        }
+
+
+        #demo {
+            cursor: cell;
+            position: relative;
+            z-index: 3;
+        }
+
+        #pop2 {
+            /* background: #000; */
+            height: 100px;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            font-variant: small-caps;
+            display: grid;
+            place-items: center;
+            font-weight: bolder;
+            color: rgb(182, 52, 52);
+            /* text-shadow: 10px 10px 50px rgb(red, 0,0); */
+            animation-name: run2;
+            /* animation-iteration-count: infinite; */
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            transition: all;
+            animation-fill-mode: forwards;
+            transform: translatey(-200px);
+        }
+        @keyframes run2 {
+            0%{
+               /* scale: -1; */
+
+            }
+            100%{
+                transform: translateX(0px);
+                scale: 4;
+                text-shadow:5px 5px 4px #c71e1e;
+            }
+        }
+
+        #pop-up {
+            width: 80%;
+            /* aspect-ratio: 1; */
+            height: 80%;
+            /* background: #000; */
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: rgba(255, 2, 2, 0.56) 0px 22px 70px 4px;
+            display: flex;
+            background-image: url("/A_practice/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        audio {
+            /* display: none; */
+            position: absolute;
+            /* z-index: -1; */
+            /* display: none; */
+            top: -10%;
+
+
+        }
+
+        .pop-for {
+            height: 500px;
+            width: 80%;
+            background: #ffffff;
+            box-shadow: rgba(18, 17, 17, 0.56) 0px 22px 70px 4px;
+            margin: auto;
+            font-variant: small-caps;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            text-align: center;
+            padding-top: 200px;
+            border-radius: 15px;
+
+        }
+
+        @media (max-width:600px) {
+            #pop-up {
+                display: none;
+            }
+        }
+
+        @media (min-width:600px) {
+            .pop-for {
+                display: none;
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 20%;
+            border-radius: 10px;
+            border-color: transparent;
+            /* margin: -10%; */
+            position: absolute;
+            top: 0%;
+            left: 0%;
+        }
+
+        #done {
+            height: 20px;
+            width: 60%;
+            display: block;
+            border: 1px solid #ccc;
+            margin-left: 20%;
+            background: #9dbf05;
+            border-radius: 15px;
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20%;
+
+        }
+        #left{
+            width: 100px;
+            height: 150px;
+           background-image: url("/A_practice/left.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+            animation-name: run3;
+            
+            /* animation-iteration-count: infinite; */
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            transition: all;
+            animation-fill-mode: forwards;
+            position: absolute;
+            left:5%;
+        }
+
+        @keyframes run3 {
+            0%{
+               left: 10%;
+            }
+            50%{
+                left: 20%;
+            }
+            100%{
+               left: 43%; 
+            }
+        }
+        #right{
+            width: 100px;
+            height: 150px;
+           background-image: url("/A_practice/right.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+            animation-name: run4;
+            
+            /* animation-iteration-count: infinite; */
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            transition: all;
+            animation-fill-mode: forwards;
+            position: absolute;
+            right:10%;
+        }
+        @keyframes run4 {
+            0%{
+               right: 10%;
+            }
+            50%{
+                right: 20%;
+            }
+            100%{
+               right: 42.5%; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="pop-for">
+            please open in deckstop mode!
+        </div>
+
+        
+
+
+
+         <!-- pop-up  -->
+        <div id="pop-up">
+             
+
+            <div id="demo">
+
+                <div id="sub">
+                    <input type="text" placeholder="enter your name" id="name1" autocomplete="off">
+                </div>
+                <div id="done">click</div>
+            </div>
+            <audio controls autoplay muted>
+                <source src="/A_practice/song.mp3">
+            </audio>
+        </div> 
+
+        <div id="left"></div>
+        <div id="right"></div>
+    </main>
+
+    <script>
+        var demo = document.getElementById("pop-up");
+        var demo2 = document.getElementById("done");
+        var name1 = document.getElementById("name1");
+        var left=document.getElementById("left");
+        var right=document.getElementById("right");
+        left.style.display="none";
+        right.style.display="none";
+        function fun(){
+            console.log(typeof(name1.value));
+            if(name1.value != "") 
+            {
+                console.log("in");
+                //    create element in main
+                var main1 = document.getElementsByTagName("main");
+
+                demo.style.display = "none";
+                // create
+                for (let index = 0; index < 1; index++) {
+
+                    let item = document.createElement("div");
+                    item.setAttribute("id", "pop");
+
+                    main1["0"].appendChild(item);
+
+                    // center
+                    let item2 = document.createElement("div");
+                    item2.innerText = `i love you so much ${name1.value}`
+                    item2.setAttribute("id", "pop2");
+
+                    main1["0"].appendChild(item2);
+                }
+                left.style.display="block";
+                right.style.display="block";
+            }
+            else{
+                console.log("out");
+            }
+           
+
+        }
+        demo2.addEventListener("click", () => { fun(); });
+    </script>
+</body>
+
+</html>
